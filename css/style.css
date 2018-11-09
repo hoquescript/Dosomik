@@ -21,10 +21,168 @@ body {
   --color-primary: #DF5047;
   --color-primary-light: #FCE8E6;
   --color-white: #fff;
-  --color-light-grey-1: #f5f5f5;
-  --color-light-grey-2: #faf9f9;
-  --color-light-grey-3: #f0eeee;
-  --color-dark-grey-1: #333;
-  --color-dark-grey-2: #555;
-  --color-dark-grey-3: #777;
-  --color-dark-grey-4: #999; }
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999; }
+
+.title {
+  display: flex; }
+  .title__menu {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: var(--color-grey-light-2);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .title__hamburger {
+    height: 2.5rem;
+    width: 2.5rem; }
+  .title__logo {
+    font-size: 3rem;
+    font-weight: 800; }
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    width: 90%;
+    padding: 0.7rem 2rem;
+    background-color: var(--color-grey-light-2);
+    border-radius: 100px;
+    border: none;
+    transition: all 0.3s;
+    margin-right: -3.25rem; }
+    .search__input:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3); }
+    .search__input::-webkit-input-placeholder {
+      font-size: inherit;
+      font-weight: 100;
+      color: var(--color-grey-light-4); }
+  .search__input:focus + .search__btn {
+    background-color: var(--color-grey-light-3); }
+  .search__btn {
+    border: none;
+    background-color: var(--color-grey-light-2); }
+    .search__btn:focus {
+      outline: none; }
+    .search__btn:active {
+      transform: translateY(-2px); }
+  .search__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3); }
+
+.user-nav {
+  display: flex; }
+  .user-nav__icon {
+    height: 2.5rem;
+    width: 2.5rem; }
+  .user-nav__photo {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%; }
+
+.navigation {
+  background-color: var(--color-grey-light-3);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  .navigation__list {
+    display: flex;
+    align-items: center;
+    list-style: none; }
+  .navigation__list::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .navigation__item {
+    float: left; }
+  .navigation__link:link, .navigation__link:visited {
+    display: block;
+    padding: 2rem 2rem;
+    transition: transform .2s;
+    color: #000;
+    text-decoration: none; }
+  .navigation__link:hover {
+    transform: translateY(-4px); }
+
+.sidenav {
+  margin-top: 3.5rem;
+  list-style: none;
+  font-size: 1.4rem; }
+  .sidenav__item {
+    position: relative; }
+    .sidenav__item:not(:last-child) {
+      margin-bottom: .75rem; }
+  .sidenav__item::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.2s; }
+  .sidenav__item:hover::before, .sidenav__item--active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .sidenav__item:active::before {
+    background-color: var(--color-primary-light); }
+  .sidenav__link:link, .sidenav__link:visited {
+    display: block;
+    padding: 1.5rem 3rem;
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10; }
+  .sidenav__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-right: 1.5rem;
+    fill: currentColor; }
+
+.header {
+  height: 6rem;
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-light-grey-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.nav {
+  height: 6rem;
+  background-color: red; }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.interface {
+  background-color: #fff;
+  flex: 1;
+  height: 68rem; }

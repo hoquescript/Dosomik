@@ -1,18 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>DOSOMIK</title>
 </head>
+
 <body>
-    <header class="header">header</header>
-    <nav class="nav">nav</nav>
+    <header class="header">
+        <div class="title">
+            <div class="title__menu">
+                <svg class="title__hamburger">
+                    <use xlink:href="img/sprite.svg#icon-menu"></use>
+                </svg>
+            </div>
+            <div class="title__logo">কারবার</div>
+        </div>
+
+        <form action="" class="search">
+            <input type="text" placeholder="Search hotels" class="search__input">
+            <button class="search__btn">
+                <svg class="search__icon">
+                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                </svg>
+            </button>
+        </form>
+
+        <div class="user-nav">
+            <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-cog"></use>
+            </svg>
+
+            <div class="user-nav__profile">
+                <img src="img/IMG_4047.JPG" alt="" class="user-nav__photo">
+                <span class="user-nav__name">Wahid</span>
+            </div>
+
+            <button class="user-nav__log">Sign Out</button>
+        </div>
+    </header>
+    <nav class="navigation">
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">File</a>
+            </li>
+            <li class="navigation__item sublink">
+                <a href="home.html" class="navigation__link">Master Data</a>
+            </li>
+            <li class="navigation__item sublink">
+                <a href="#" class="navigation__link">Tasks</a>
+            </li>
+            <li class="navigation__item sublink">
+                <a href="#" class="navigation__link">Transation</a>
+            </li>
+            <li class="navigation__item sublink">
+                <a href="#" class="navigation__link">Reports</a>
+            </li>
+            <li class="navigation__item">
+                <a href="pages/contact.html" class="navigation__link">MIS Reports</a>
+            </li>
+            <li class="navigation__item">
+                <a href="pages/login.html" class="navigation__link">Administration</a>
+            </li>
+        </ul>
+    </nav>
     <div class="content">
-        <div class="sidenav">sidenav</div>
-        <main class="interface">interface</main>
+        <nav class="sidebar">
+            <ul class="sidenav">
+                <li class="sidenav__item sidenav__item--active">
+                    <a href="" class="sidenav__link">
+                        <svg class="sidenav__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="sidenav__label">Accounts Data</span>
+                    </a>
+                </li>
+                <li class="sidenav__item">
+                    <a href="" class="sidenav__link">
+                        <svg class="sidenav__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="sidenav__label">Store Data</span>
+                    </a>
+                </li>
+                <li class="sidenav__item">
+                    <a href="" class="sidenav__link">
+                        <svg class="sidenav__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="sidenav__label">HR Data</span>
+                    </a>
+                </li>
+                <li class="sidenav__item">
+                    <a href="" class="sidenav__link">
+                        <svg class="sidenav__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="sidenav__label">Student Data</span>
+                    </a>
+                </li>
+                <li class="sidenav__item">
+                    <a href="" class="sidenav__link">
+                        <svg class="sidenav__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="sidenav__label">Teacher Data</span>
+                    </a>
+                </li>
+                <li class="sidenav__item">
+                    <a href="" class="sidenav__link">
+                        <svg class="sidenav__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="sidenav__label">Class Data</span>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="license"> &copy; 2018 by DOTBD . All right reserved . </p>
+        </nav>
+        <main class="interface"></main>
     </div>
 </body>
+
 </html>
