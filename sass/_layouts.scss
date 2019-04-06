@@ -7,27 +7,33 @@
     align-items: center;
 }
 
-.nav {
-    height: 6rem;
-    // background-color: var(--color-light-grey-1);
-    background-color: red;
-}
 
 .content {
     display: flex;
+    flex-grow: 1;
 }
 
 .sidebar {
     background-color: var(--color-grey-dark-1);
-    flex: 0 0 20%;
+    position: absolute;
 
     display: flex;
+    width: 20%;
     flex-direction: column;
     justify-content: space-between;
+    height: calc(100vh - #{10.979rem});
+    transition: transform .5s;
+    &--active{
+        transform: translateX(-100%);
+
+        &>*{
+            transform: translateX(-100%);
+        }
+    }
 }
 
 .interface {
     background-color: #fff;
     flex: 1;
-    height: 68rem;
+    // height: 70rem;
 }

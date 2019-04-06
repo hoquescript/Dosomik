@@ -20,3 +20,29 @@ body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
 }
+.btn-round{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.1s;
+    cursor: pointer;
+    &:hover{
+        background-color: #EDEDED;
+    }
+
+    &__icon{
+        height: 2.5rem;
+        width: 2.5rem;
+        fill: var(--color-grey-dark-2);
+    }
+}
+.license{
+    color: white;
+    text-align: center;
+    font-family: inherit;
+    font-size: 1.1rem;
+}
+
